@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: custom-controller
+  name: custom-controller
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-controller
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: custom-controller
+    spec:
+      containers:
+      - image: 1100/custom-kubernetes-controller:0.1.0
+        name: custom-kubernetes-controller
+        imagePullPolicy: Always
+        resources: {}
+status: {}
