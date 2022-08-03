@@ -19,8 +19,8 @@ spec:
         app: custom-controller
     spec:
       containers:
-      - image: 1100/custom-kubernetes-controller:0.1.0
+      - image: 1100/custom-kubernetes-controller:0.1.7
         name: custom-kubernetes-controller
-        imagePullPolicy: Always
+        #imagePullPolicy: Always
         resources: {}
 status: {}
